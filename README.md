@@ -46,9 +46,6 @@ this.callThisToUnsubscribe1 = TranscriptEvents.addListener("onRecordingChange", 
     });
 
 
-// ...
-
-const result = await Transcription.multiply(3, 7);
 ```
 
 ## Contributing
