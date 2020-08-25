@@ -83,6 +83,9 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
+
+    console.log("URI: " + RNBackgroundDownloader.directories.documents);
+
     TranscriptEvents = new NativeEventEmitter(Transcription);
 
     this.transcribeUnsubscribe1 = TranscriptEvents.addListener("onRecordingChange", res => {
@@ -142,7 +145,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Result: {this.state.result}</Text>
-        <Button title={"Start Recording"} onPress={() => Transcription.startRecording(`${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`)} />
+        <Button title={"Start Recording"} onPress={() => Transcription.startRecordingFile(`${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`, `${RNBackgroundDownloader.directories.documents}/test.pcm`, false)} />
         <Button title={"Stop Recording"} onPress={() => Transcription.stopRecording()} />
         <Button title={"Download Model+Scorer"} onPress={() => this.startModelDownloads()} />
         <Progress.Bar progress={this.state.modelProgress} width={200} />
