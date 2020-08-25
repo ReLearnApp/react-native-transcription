@@ -20,7 +20,7 @@ import Transcription from "react-native-transcription";
 import { NativeEventEmitter } from 'react-native';
 
 // Start a streaming/live transcription.
-Transcription.startRecording(modelURI, scorerURI)
+Transcription.startRecording(aacFileURI, modelURI, scorerURI)
 
 // Stop the transcription
 Transcription.stopRecording

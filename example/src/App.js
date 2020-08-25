@@ -89,7 +89,15 @@ export default class App extends React.Component {
     TranscriptEvents = new NativeEventEmitter(Transcription);
 
     this.transcribeUnsubscribe1 = TranscriptEvents.addListener("onRecordingChange", res => {
-      //console.log("onRecordingChange event", res);
+      console.log("onRecordingChange event", res);
+      var transcription = "";
+      for(word in res.words){
+        transcription = (transcription + res.words[word] + " ");
+      }
+      this.setState({ result: transcription});
+    });
+    this.transcribeUnsubscribe1 = TranscriptEvents.addListener("onRecordingCompletion", res => {
+      console.log("onRecordingCompletion event", res);
       var transcription = "";
       for(word in res.words){
         transcription = (transcription + res.words[word] + " ");
@@ -145,8 +153,11 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Result: {this.state.result}</Text>
-        <Button title={"Start Recording"} onPress={() => Transcription.startRecordingFile(`${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`, `${RNBackgroundDownloader.directories.documents}/test.pcm`, false)} />
-        <Button title={"Stop Recording"} onPress={() => Transcription.stopRecording()} />
+        <Button title={"Start Recording"} onPress={() => 
+          //Transcription.startRecordingFile(`${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`, `${RNBackgroundDownloader.directories.documents}/test.pcm`, false)
+          Transcription.startRecording(`${RNBackgroundDownloader.directories.documents}/test.aac`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`)
+          } />
+        <Button title={"Stop Recording"} onPress={() => Transcription.stopRecording(false)} />
         <Button title={"Download Model+Scorer"} onPress={() => this.startModelDownloads()} />
         <Progress.Bar progress={this.state.modelProgress} width={200} />
         <Progress.Bar progress={this.state.scorerProgress} width={200} />
