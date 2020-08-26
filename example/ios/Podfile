@@ -1,5 +1,9 @@
 platform :ios, '9.0'
+plugin 'cocoapods-user-defined-build-types'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+enable_user_defined_build_types!
+#use_frameworks!
 
 def add_flipper_pods!
   version = '~> 0.33.1'
@@ -53,7 +57,12 @@ target 'TranscriptionExample' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'react-native-transcription', :path => '../..'
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone.podspec"
+  pod 'Permission-SpeechRecognition', :path => "#{permissions_path}/SpeechRecognition.podspec"
+  
+
+  pod 'react-native-transcription', :build_type => :dynamic_framework, :path => '../..'
 
   use_native_modules!
 

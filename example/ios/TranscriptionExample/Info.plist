@@ -53,5 +53,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSMicrophoneUsageDescription</key>
+  	<string>The example uses your mic to transcribe and record text</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+  	<string>Might use SFSpeechRecognizer for live transcription.</string>
 </dict>
 </plist>

@@ -1,3 +1,5 @@
+import deepspeech_ios
+
 @objc(Transcription)
 class Transcription: NSObject {
 
