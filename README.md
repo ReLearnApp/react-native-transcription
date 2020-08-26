@@ -7,10 +7,31 @@ Transcribe live and recorded audio on Android and (coming soon) ~~iOS~~
 ```sh
 npm install react-native-transcription
 ```
+## Example App
+
+To get started with the example project, run `yarn bootstrap` in the root directory to install the required dependencies for each package:
+
+```sh
+yarn bootstrap
+```
+
+Run the [example app](/example/) on your preferred platform.
+
+To run the example app on Android:
+
+```sh
+yarn example android
+```
+
+To run the example app on iOS:
+
+```sh
+yarn example ios
+```
 
 ## Usage
 
-It's easiest to read the [example.](https://github.com/zaptrem/react-native-transcription/blob/master/example/src/App.js)
+It's easiest to read the [example's code.](https://github.com/zaptrem/react-native-transcription/blob/master/example/src/App.js)
 
 1. Download models from the Mozilla-STT repo to the local file system and save the URIs. We used RNBackgroundDownloader as the files are too large to assume a continuous session for the whole download.
 
