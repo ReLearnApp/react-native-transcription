@@ -1,6 +1,6 @@
 # react-native-transcription
 
-Transcribe live and (coming soon) ~~recorded~~ audio on Android and (coming soon) ~~iOS~~
+Transcribe live and recorded audio on Android and (coming soon) ~~iOS~~
 
 ## Installation
 
@@ -38,7 +38,7 @@ this.callThisToUnsubscribe1 = TranscriptEvents.addListener("onRecordingChange", 
       this.setState({ result: transcriptionString });
     });
  
- // Listen for final transcription 
+ // Listen for final transcription
  this.callThisToUnsubscribe2 = TranscriptEvents.addListener("onRecordingCompletion", res => {
       console.log("onRecordingcompletion event", res);
       var transcriptionString = "";
