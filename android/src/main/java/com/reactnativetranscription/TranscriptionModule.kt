@@ -26,6 +26,12 @@ class TranscriptionModule(reactContext: ReactApplicationContext) : ReactContextB
     return "Transcription"
   }
 
+  @ReactMethod
+  private fun transcribeWav(wavPath: String, modelPath: String, scorerPath: String) {
+    val fileTranscriber = FileTranscriptionModule(reactContext)
+    fileTranscriber.transcribeWav(wavPath, modelPath, scorerPath)
+  }
+
   fun setOnAudioRecordListener(onAudioRecordListener: OnAudioRecordListener?) {
     this.onAudioRecordListener = onAudioRecordListener
   }
@@ -37,7 +43,7 @@ class TranscriptionModule(reactContext: ReactApplicationContext) : ReactContextB
   // Call this method from Activity onStartButton Click to start recording
   @Synchronized
   @ReactMethod
-  fun startRecording(filePath: String?, modelPath: String, scorerPath: String) {
+  fun startRecording(filePath: String, modelPath: String, scorerPath: String) {
     file = File(filePath)
     if (file == null) {
       //onAudioRecordListener!!.onError(FILE_NULL)

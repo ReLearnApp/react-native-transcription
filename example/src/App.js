@@ -104,6 +104,14 @@ export default class App extends React.Component {
       }
       this.setState({ result: transcription});
     });
+    this.transcribeUnsubscribe1 = TranscriptEvents.addListener("onWavTranscribed", res => {
+      console.log("onWavTranscribed event", res);
+      var transcription = "";
+      for(word in res.words){
+        transcription = (transcription + res.words[word] + " ");
+      }
+      this.setState({ result: transcription});
+    });
   }
 
   startModelDownloads() {
@@ -147,6 +155,27 @@ export default class App extends React.Component {
     }).error((error) => {
       console.log('Download canceled due to error: ', error);
     });
+
+    let wavTask = RNBackgroundDownloader.download({
+      id: 'wav',
+      url: 'https://www.ee.columbia.edu/~dpwe/sounds/mr/spkr0.wav',
+      destination: `${RNBackgroundDownloader.directories.documents}/test.wav`
+    }).begin((expectedBytes) => {
+      console.log(`Going to download ${expectedBytes} bytes!`);
+    }).progress((percent) => {
+      console.log(`Downloaded: ${percent * 100}%`);
+      this.setState({
+        wavProgress: percent
+      })
+    }).done(() => {
+      console.log('Download is done!');
+      this.setState({
+        wavProgress: 0
+      })
+    }).error((error) => {
+      console.log('Download canceled due to error: ', error);
+    });
+
   }
 
   render() {
@@ -158,9 +187,13 @@ export default class App extends React.Component {
           Transcription.startRecording(`${RNBackgroundDownloader.directories.documents}/test.aac`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`)
           } />
         <Button title={"Stop Recording"} onPress={() => Transcription.stopRecording(false)} />
-        <Button title={"Download Model+Scorer"} onPress={() => this.startModelDownloads()} />
+        <Button title={"Transcribe Wav File"} onPress={() => 
+          Transcription.transcribeWav(`${RNBackgroundDownloader.directories.documents}/test.wav`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`)
+          } />
+        <Button title={"Download Model+Scorer+Test Audio"} onPress={() => this.startModelDownloads()} />
         <Progress.Bar progress={this.state.modelProgress} width={200} />
         <Progress.Bar progress={this.state.scorerProgress} width={200} />
+        <Progress.Bar progress={this.state.wavProgress} width={200} />
       </View>
     );
   }

@@ -19,6 +19,9 @@ It's easiest to read the [example.](https://github.com/zaptrem/react-native-tran
 import Transcription from "react-native-transcription";
 import { NativeEventEmitter } from 'react-native';
 
+// Transcribe a .wav file
+Transcription.transcribeWav(wavFileURI, modelURI, scorerURI)
+
 // Start a streaming/live transcription.
 Transcription.startRecording(aacFileURI, modelURI, scorerURI)
 

@@ -86,6 +86,9 @@ class AudioRecordThread internal constructor(outputStream: OutputStream, onRecor
         val decoded = model.finishStreamWithMetadata(streamContext, 1)
         val map = packageTranscription(decoded)
         emitDeviceEvent("onRecordingCompletion", map)
+        if (model != null) {
+          model?.freeModel()
+        }
       }
 
       mediaCodec.stop()
