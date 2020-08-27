@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A8F94E924F72C4A00DF8B3F /* AudioContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F94E824F72C4A00DF8B3F /* AudioContext.swift */; };
 		F4FF95D7245B92E800C19C63 /* Transcription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Transcription.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8A7101BF24F6F9D800E03940 /* libTranscription.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTranscription.a; path = "/Users/ryantremblay/newnnewnative/react-native-transcription/ios/build/Debug-iphoneos/libTranscription.a"; sourceTree = "<absolute>"; };
+		8A8F94E724F72C3600DF8B3F /* libTranscription.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTranscription.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A8F94E824F72C4A00DF8B3F /* AudioContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioContext.swift; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* Transcription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transcription.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Transcription-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Transcription-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Transcription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcription.swift; sourceTree = "<group>"; };
@@ -43,9 +45,11 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				8A8F94E824F72C4A00DF8B3F /* AudioContext.swift */,
 				F4FF95D6245B92E800C19C63 /* Transcription.swift */,
 				B3E7B5891CC2AC0600A0062D /* Transcription.m */,
 				F4FF95D5245B92E700C19C63 /* Transcription-Bridging-Header.h */,
+				8A8F94E724F72C3600DF8B3F /* libTranscription.a */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +70,7 @@
 			);
 			name = Transcription;
 			productName = RCTDataManager;
-			productReference = 8A7101BF24F6F9D800E03940 /* libTranscription.a */;
+			productReference = 8A8F94E724F72C3600DF8B3F /* libTranscription.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -106,6 +110,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A8F94E924F72C4A00DF8B3F /* AudioContext.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* Transcription.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

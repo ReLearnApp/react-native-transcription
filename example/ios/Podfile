@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '13.5'
 plugin 'cocoapods-user-defined-build-types'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
