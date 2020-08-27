@@ -1,12 +1,39 @@
 # react-native-transcription
 
-Transcribe live and recorded audio on Android and (coming soon) ~~iOS~~
+Transcribe live and recorded audio on Android and iOS (live audio not currently available for iOS)
 
 ## Installation
 
 ```sh
 npm install react-native-transcription
 ```
+### iOS
+
+Mozilla DeepSpeech is only available as a Dynamic Framework, so we have to use a cocoapods plugin to avoid using `use_frameworks!` which breaks many other libraries.
+
+Run:
+``` Bash
+$ sudo gem install cocoapods-user-defined-build-types
+```
+
+at the top of your podfile, add 
+
+```ruby
+plugin 'cocoapods-user-defined-build-types'
+enable_user_defined_build_types!
+```
+
+then add the build_type tag to the react-native-transcription pod in your podfile.
+```ruby
+  pod 'react-native-transcription', :build_type => :dynamic_framework, :path => 'THIS/IS/DIFFERENT/FOR/YOU'
+```
+
+then run `pod install`.
+
+Then open your project in Xcode and add the libdeepspeech.so (you can find it either in the DeepSpeech repo releases or in node_modules/react-native-transcription/ios/Frameworks) file to your Target's "Frameworks, Libraries, and Embedded Content" section: 
+![Screen Shot 2020-08-26 at 8 17 36 PM](https://user-images.githubusercontent.com/1612230/91369225-459c1d80-e7d9-11ea-86e2-f535fe65cd2e.png)
+
+
 ## Example App
 
 To get started with the example project, run `yarn bootstrap` in the root directory to install the required dependencies for each package:
