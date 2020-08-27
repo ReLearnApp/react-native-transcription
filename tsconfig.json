@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-transcription": ["./src/index"]
+      "react-native-transcription": [
+        "./src/index"
+      ]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -10,8 +12,12 @@
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "module": "esnext",
+    "allowJs": true /* Allow javascript files to be compiled. */,
+    "checkJs": false /* Report errors in .js files. */,
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
