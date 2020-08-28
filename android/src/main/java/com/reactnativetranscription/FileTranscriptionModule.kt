@@ -85,6 +85,9 @@ class FileTranscriptionModule(reactContext: ReactApplicationContext) {
       //this._decodedString.setText(decoded)
       val map = packageTranscription(decoded)
       emitDeviceEvent("onWavTranscribed", map)
+      if (model != null) {
+        model?.freeModel()
+      }
 
     } catch (ex: FileNotFoundException) {
     } catch (ex: IOException) {
