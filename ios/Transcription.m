@@ -1,6 +1,6 @@
 #import <React/RCTBridgeModule.h>
-
-@interface RCT_EXTERN_MODULE(Transcription, NSObject)
+#import <React/RCTEventEmitter.h>
+@interface RCT_EXTERN_MODULE(Transcription, RCTEventEmitter)
 
 RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
                  withResolver:(RCTPromiseResolveBlock)resolve

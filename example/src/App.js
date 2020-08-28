@@ -11,8 +11,8 @@ export default class App extends React.Component {
     this.state = {
       result: "Download the model files then tap start."
     }// Don't call this.setState() here! 
-    console.log("Multiply")
-    Transcription.multiply(4, 5).then(result => console.log(result))
+    //console.log("Multiply")
+    //Transcription.multiply(4, 5).then(result => console.log(result))
 
     let lostTasks = RNBackgroundDownloader.checkForExistingDownloads().then((lostTasks) => {
       for (let task of lostTasks) {
@@ -90,7 +90,7 @@ export default class App extends React.Component {
 
     TranscriptEvents = new NativeEventEmitter(Transcription);
 
-    /*this.transcribeUnsubscribe1 = TranscriptEvents.addListener("onRecordingChange", res => {
+    this.transcribeUnsubscribe1 = TranscriptEvents.addListener("onRecordingChange", res => {
       console.log("onRecordingChange event", res);
       var transcription = "";
       for(word in res.words){
@@ -113,7 +113,7 @@ export default class App extends React.Component {
         transcription = (transcription + res.words[word] + " ");
       }
       this.setState({ result: transcription});
-    });*/
+    });
   }
 
   startModelDownloads() {
