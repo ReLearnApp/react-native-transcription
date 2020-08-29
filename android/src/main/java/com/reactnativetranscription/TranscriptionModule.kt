@@ -105,6 +105,7 @@ class TranscriptionModule(reactContext: ReactApplicationContext) : ReactContextB
     }
     val outputStream: OutputStream
     outputStream = try {
+      file.createNewFile()
       FileOutputStream(file)
     } catch (e: FileNotFoundException) {
       throw RuntimeException(

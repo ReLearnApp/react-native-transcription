@@ -38,6 +38,7 @@ class FileTranscriptionModule(reactContext: ReactApplicationContext) {
       model = DeepSpeechModel(modelPath)
       model?.enableExternalScorer(scorerPath)
       model!!.setBeamWidth(BEAM_WIDTH.toLong())
+      model!!.setScorerAlphaBeta(0.931289039105002F, 1.1834137581510284F)
       Log.d("transcription","Created model.\n")
     }
 
