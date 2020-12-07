@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A5034DC24FEB4D700DEB741 /* deepspeech_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5034DB24FEB4D700DEB741 /* deepspeech_ios.framework */; };
 		8A8F94E924F72C4A00DF8B3F /* AudioContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F94E824F72C4A00DF8B3F /* AudioContext.swift */; };
 		F4FF95D7245B92E800C19C63 /* Transcription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Transcription.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8A5034DB24FEB4D700DEB741 /* deepspeech_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = deepspeech_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8F94E724F72C3600DF8B3F /* libTranscription.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTranscription.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8F94E824F72C4A00DF8B3F /* AudioContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioContext.swift; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* Transcription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transcription.m; sourceTree = "<group>"; };
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5034DC24FEB4D700DEB741 /* deepspeech_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +53,16 @@
 				B3E7B5891CC2AC0600A0062D /* Transcription.m */,
 				F4FF95D5245B92E700C19C63 /* Transcription-Bridging-Header.h */,
 				8A8F94E724F72C3600DF8B3F /* libTranscription.a */,
+				8A5034DA24FEB4D700DEB741 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		8A5034DA24FEB4D700DEB741 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A5034DB24FEB4D700DEB741 /* deepspeech_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
