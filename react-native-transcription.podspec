@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   
   s.source_files = "ios/*.{h,m,mm,swift}"
-  #s.vendored_frameworks    = ['ios/Frameworks/deepspeech_ios.framework']
+  s.vendored_frameworks    = ['ios/Frameworks/deepspeech_ios.framework']
   #s.swift_versions = ['5.1.3']
 
   s.dependency "React"

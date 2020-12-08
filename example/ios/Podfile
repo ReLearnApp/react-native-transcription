@@ -1,8 +1,8 @@
 platform :ios, '13.5'
-plugin 'cocoapods-user-defined-build-types'
+#plugin 'cocoapods-user-defined-build-types'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-enable_user_defined_build_types!
+#enable_user_defined_build_types!
 #use_frameworks!
 
 
@@ -44,7 +44,7 @@ target 'TranscriptionExample' do
   pod 'Permission-SpeechRecognition', :path => "#{permissions_path}/SpeechRecognition.podspec"
   
 
-  pod 'react-native-transcription', :build_type => :dynamic_framework, :path => '../..'
+  pod 'react-native-transcription', :path => '../..'
 
   use_native_modules!
 
