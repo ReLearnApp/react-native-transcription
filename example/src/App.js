@@ -119,8 +119,8 @@ export default class App extends React.Component {
   startModelDownloads() {
     let modelTask = RNBackgroundDownloader.download({
       id: 'model',
-      url: 'https://github.com/mozilla/DeepSpeech/releases/download/v0.8.0/deepspeech-0.8.0-models.tflite',
-      destination: `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`
+      url: 'https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.tflite',
+      destination: `${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.tflite`
     }).begin((expectedBytes) => {
       console.log(`Going to download ${expectedBytes} bytes!`);
     }).progress((percent) => {
@@ -140,8 +140,8 @@ export default class App extends React.Component {
 
     let scorerTask = RNBackgroundDownloader.download({
       id: 'scorer',
-      url: 'https://github.com/mozilla/DeepSpeech/releases/download/v0.8.0/deepspeech-0.8.0-models.scorer',
-      destination: `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`
+      url: 'https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer',
+      destination: `${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.scorer`
     }).begin((expectedBytes) => {
       console.log(`Going to download ${expectedBytes} bytes!`);
     }).progress((percent) => {
@@ -185,12 +185,14 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text>Result: {this.state.result}</Text>
         <Button title={"Start Recording"} onPress={() => 
-          //Transcription.startRecordingFile(`${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`, `${RNBackgroundDownloader.directories.documents}/test.pcm`, false)
-          Transcription.startRecording(`${RNBackgroundDownloader.directories.documents}/test.aac`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`)
+          //Transcription.startRecordingFile(`${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.scorer`, `${RNBackgroundDownloader.directories.documents}/test.pcm`, false)
+          Transcription.startRecording(`${RNBackgroundDownloader.directories.documents}/test.aac`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.scorer`)
           } />
         <Button title={"Stop Recording"} onPress={() => Transcription.stopRecording(false)} />
-        <Button title={"Transcribe Wav File"} onPress={() => 
-          Transcription.transcribeWav(`${RNBackgroundDownloader.directories.documents}/test.wav`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.8.0-models.scorer`)
+        <Button title={"Transcribe Wav File"} onPress={() => {
+          console.log(`Transcribing WAV file: ${RNBackgroundDownloader.directories.documents}/test.wav`)
+          Transcription.transcribeWav(`${RNBackgroundDownloader.directories.documents}/test.wav`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.tflite`, `${RNBackgroundDownloader.directories.documents}/deepspeech-0.9.3-models.scorer`);
+        }
           } />
         <Button title={"Download Model+Scorer+Test Audio"} onPress={() => this.startModelDownloads()} />
         <Progress.Bar progress={this.state.modelProgress} width={200} />

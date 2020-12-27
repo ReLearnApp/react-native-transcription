@@ -133,5 +133,5 @@ dependencies {
   implementation 'androidx.appcompat:appcompat:1.0.2'
   implementation 'androidx.core:core-ktx:1.0.2'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation 'org.mozilla.deepspeech:libdeepspeech:0.8.2'
+  implementation 'org.mozilla.deepspeech:libdeepspeech:0.9.2'
 }

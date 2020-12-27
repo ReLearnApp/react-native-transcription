@@ -21,6 +21,7 @@ class Transcription: RCTEventEmitter {
         
         model = try! DeepSpeechModel(modelPath: modelPath)
         try! model!.enableExternalScorer(scorerPath: scorerPath)
+        //try! model!.setScorerAlphaBeta(alpha: 0.931289039105002, beta: 1.1834137581510284)
         
         recognizeFile(audioPath: wavPath)
     }

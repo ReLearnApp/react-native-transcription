@@ -38,13 +38,16 @@ class FileTranscriptionModule(reactContext: ReactApplicationContext) {
       model = DeepSpeechModel(modelPath)
       model?.enableExternalScorer(scorerPath)
       model!!.setBeamWidth(BEAM_WIDTH.toLong())
-      model!!.setScorerAlphaBeta(0.931289039105002F, 1.1834137581510284F)
+      //model!!.setScorerAlphaBeta(0.931289039105002F, 1.1834137581510284F)
       Log.d("transcription","Created model.\n")
     }
 
     //this._startInference.setEnabled(false)
     //newModel(this._tfliteModel.getText().toString())
     //this._tfliteStatus.setText("Extracting audio features ...")
+    if (!File(audioFile).exists()) {
+      throw Exception("File transcription failed: $audioFile does not exist.\n")
+    }
     Log.d("transcription","Extracting audio features\n")
     try {
       val wave = RandomAccessFile(audioFile, "r")
