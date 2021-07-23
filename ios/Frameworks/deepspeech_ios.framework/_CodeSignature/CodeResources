@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/deepspeech_ios-Swift.h</key>
 		<data>
-		WaQSij7LjnlOWGJEKG2YWMKtJ/w=
+		HdHhtwXx2EVoYzDH8IkqH21Tw4c=
 		</data>
 		<key>Headers/deepspeech_ios.h</key>
 		<data>
@@ -14,31 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6zAVNaj0EomDXgGVxlhqaUiLDKY=
+		9i1ifMZJhaDdO4QM6Bn6IWm4enw=
 		</data>
 		<key>Modules/deepspeech_ios.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		/E18KRpi2UVj+kLOLauAtFWOgbY=
+		bKbLnhW+N68iztuadR1hrqBgTMA=
 		</data>
 		<key>Modules/deepspeech_ios.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		/E18KRpi2UVj+kLOLauAtFWOgbY=
+		bKbLnhW+N68iztuadR1hrqBgTMA=
 		</data>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Ljo2yl+o1256rNdb4ACy8wOEEFo=
+		vD95bAuHYc5dghU0A9x3mheLyMg=
+		</data>
+		<key>Modules/deepspeech_ios.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		ygPpP5eLR0at/40g1t2TbYdXbwY=
 		</data>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		a0+nhh0bMns7T73ikO2aIIG99Lc=
+		9vQbMMWZYLPcwfNRpn4wKWOyz4g=
 		</data>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		Ljo2yl+o1256rNdb4ACy8wOEEFo=
+		vD95bAuHYc5dghU0A9x3mheLyMg=
+		</data>
+		<key>Modules/deepspeech_ios.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		ygPpP5eLR0at/40g1t2TbYdXbwY=
 		</data>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		a0+nhh0bMns7T73ikO2aIIG99Lc=
+		9vQbMMWZYLPcwfNRpn4wKWOyz4g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -46,7 +54,7 @@
 		</data>
 		<key>PrivateHeaders/deepspeech.h</key>
 		<data>
-		f6hsykN1cg/v00U6dZMuTX5OXmA=
+		YHq0Z15iZ/ndtHoNefOes/uGOkg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -55,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TmtRz5hwDksZmCsgx+++J3KVMNkyvlOPHroCDC3OD9Q=
+			seHNN3rrj9vLqHC6IGrTXWM5rP+cWwniRKbkLbam3mw=
 			</data>
 		</dict>
 		<key>Headers/deepspeech_ios.h</key>
@@ -69,42 +77,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yx1d90KBN3XpISQN+3dCUa0BBYFcvGGOOLx/loEq9pM=
+			aUxFbI+71zSEWowEi7PD7LiCiMVRaRNPEeh4iCzKHzo=
 			</data>
 		</dict>
 		<key>Modules/deepspeech_ios.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yx1d90KBN3XpISQN+3dCUa0BBYFcvGGOOLx/loEq9pM=
+			aUxFbI+71zSEWowEi7PD7LiCiMVRaRNPEeh4iCzKHzo=
 			</data>
 		</dict>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k41TAEeunmVSU7YsklNTYdcGgsFc7ymQzXUH7Pd0vro=
+			ql2MRJaFq/h8YxBK5aaTDCAgBqAmWv6z5rqq/WL3MFw=
+			</data>
+		</dict>
+		<key>Modules/deepspeech_ios.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tLPn7HhmiWLoD8bWBbiOgO61z0v0TSKjhLfWx/KwG3s=
 			</data>
 		</dict>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r0wRpPafzks5ZsptiGS1Ua0lT69+fHC/6lsuW9SLeag=
+			XOuXGxviu8mZW71KWcuidxYrVE9Vsd6LyH5lmzmGqpc=
 			</data>
 		</dict>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k41TAEeunmVSU7YsklNTYdcGgsFc7ymQzXUH7Pd0vro=
+			ql2MRJaFq/h8YxBK5aaTDCAgBqAmWv6z5rqq/WL3MFw=
+			</data>
+		</dict>
+		<key>Modules/deepspeech_ios.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tLPn7HhmiWLoD8bWBbiOgO61z0v0TSKjhLfWx/KwG3s=
 			</data>
 		</dict>
 		<key>Modules/deepspeech_ios.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r0wRpPafzks5ZsptiGS1Ua0lT69+fHC/6lsuW9SLeag=
+			XOuXGxviu8mZW71KWcuidxYrVE9Vsd6LyH5lmzmGqpc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -118,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qu1sdPyPLGkxq52wnugPw0GcpO1UiW97w91aRH3qbEA=
+			GRnWuU7+biCmqnIoRNtGagqKhT9y3aQO1vUg8JTFzDk=
 			</data>
 		</dict>
 	</dict>
